@@ -1,9 +1,9 @@
 <?php
 
-
+require_once('config.php');
 
 function connectDB(){
-	$conn = new mysqli("localhost","root","","sb_star_wars");
+	$conn = new mysqli(DB_HOST,DB_USERNAME,DB_PASSWORD,DB_NAME);
 
 	if ($conn -> connect_errno) {
 	  echo "Failed to connect to MySQL: " . $conn -> connect_error;
